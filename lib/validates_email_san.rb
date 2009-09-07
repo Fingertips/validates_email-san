@@ -1,7 +1,7 @@
 module ActiveRecord
   module Validations #:nodoc:
     module ClassMethods
-      local_part_illegal_chars = '[^@<>\(\)\[\]:;\\\s\.]'
+      local_part_illegal_chars = '[^@<>\(\)\[\]:;\\\\\s\.]'
       EMAIL_REGEXP = /^[^\.](#{local_part_illegal_chars}|\.#{local_part_illegal_chars})+@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
       
       # Takes a list of attributes that should be validated to be valid

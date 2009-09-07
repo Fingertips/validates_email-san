@@ -21,6 +21,7 @@ class ValidatesEmailTest < ActiveSupport::TestCase
   
   test "accepts valid email addresses" do
     %w{
+      sasha@example.com
       foo.bar.baz@example.com
       FOO.bar.BAZ@EXAMPLE.COM
       ML+foo@example.com
