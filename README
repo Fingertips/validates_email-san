@@ -1,6 +1,7 @@
 === ValidatesEmail-San
 
-A simple plugin which adds a validates_email class method to ActiveRecord::Base.
+A simple Rails plugin which adds a validates_email class method to
+ActiveRecord::Base.
 
   class Member < ActiveRecord::Base
     validates_email :email, :message => "is not a valid email address"
