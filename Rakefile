@@ -21,3 +21,15 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |s|
+    s.name = "validates_email-san"
+    s.summary = s.description = "A simple Rails plugin which adds a validates_email class method to ActiveRecord::Base."
+    s.homepage = "http://fingertips.github.com"
+    s.email = "eloy@fngtps.com"
+    s.authors = ["Eloy Duran", "Manfred Stienstra"]
+  end
+rescue LoadError
+end
