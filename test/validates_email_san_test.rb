@@ -89,7 +89,7 @@ class ValidatesEmailTest < ActiveSupport::TestCase
   
   test "adds a sensible default error message" do
     @obj.email = 'foo.@example.com'; @obj.valid?
-    assert_match /is not a valid email address/, @obj.errors.on(:email).to_s
+    assert_match /is not a valid email address/, @obj.errors['email'].to_s
   end
   
   test "allows the passing of all options allowed by validates_format_of" do
@@ -98,11 +98,11 @@ class ValidatesEmailTest < ActiveSupport::TestCase
     
     def @obj.run_validation?; false; end
     @obj.valid?
-    assert_no_match(/dude, that's sooo not an email address/, @obj.errors.on(:email).to_s)
+    assert_no_match(/dude, that's sooo not an email address/, @obj.errors['email'].to_s)
     
     def @obj.run_validation?; true; end
     @obj.valid?
-    assert_match /dude, that's sooo not an email address/, @obj.errors.on(:email).to_s
+    assert_match /dude, that's sooo not an email address/, @obj.errors['email'].to_s
   end
   
   private
@@ -110,12 +110,12 @@ class ValidatesEmailTest < ActiveSupport::TestCase
   def assert_valid_email(email)
     @obj.email = email
     @obj.valid?
-    assert @obj.errors.on(:email).blank?, "Expected `#{email}' to be valid"
+    assert @obj.errors[:email].blank?, "Expected `#{email}' to be valid"
   end
   
   def assert_not_valid_email(email)
     @obj.email = email
     @obj.valid?
-    assert !@obj.errors.on(:email).blank?, "Expected `#{email}' to NOT be valid"
+    assert !@obj.errors[:email].blank?, "Expected `#{email}' to NOT be valid"
   end
 end
