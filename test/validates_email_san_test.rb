@@ -27,6 +27,7 @@ class ValidatesEmailTest < ActiveSupport::TestCase
       ML+foo@example.com
       foo@bar.example.com
       foo@in.nl
+      f@example.com
     }.each do |email|
       assert_valid_email email
     end
