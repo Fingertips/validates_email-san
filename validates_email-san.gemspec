@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{validates_email-san}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Eloy Duran", "Manfred Stienstra"]
-  s.date = %q{2009-09-07}
+  s.authors = ["Eloy Duran", "Manfred Stienstra", "Jeff Kreeftmeijer"]
+  s.date = %q{2013-06-17}
   s.description = %q{A simple Rails plugin which adds a validates_email class method to ActiveRecord::Base.}
   s.email = %q{eloy@fngtps.com}
   s.extra_rdoc_files = [
